@@ -1,0 +1,16 @@
+services:
+  mysql:
+    image: mysql
+    ports:
+      - "3306:3306"
+    expose:
+      - "3306"
+    environment:
+      - MYSQL_USER=springuser
+      - MYSQL_PASSWORD=ThePassword
+      - MYSQL_DATABASE=db_example
+      - MYSQL_ROOT_PASSWORD=root
+      - HTTP_PROXY=http://administrador@yaha.local:*ZFf<??L*69wooX;3n<P@192.168.1.190:3128
+      - HTTPS_PROXY=http://administrador@yaha.local:*ZFf<??L*69wooX;3n<P@192.168.1.190:3128
+    volumes:
+      - "./conf.d:/etc/mysql/conf.d:ro"
